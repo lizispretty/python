@@ -1,3 +1,7 @@
 import streamlit as st
 
-st.image("samsung-memory-IJolVhJKk7c-unsplash.jpg")
+enable = st.checkbox("Enable camera")
+picture = st.camera_input("Take a picture", disabled=not enable)
+
+if picture:
+    st.image(picture)
