@@ -1,4 +1,3 @@
 import streamlit as st
 
-st.page_link("website.py", label="Home", icon="🏠")
-st.page_link("we.py", label="Page 1", icon="1️⃣")
+st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
