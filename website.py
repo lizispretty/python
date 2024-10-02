@@ -1,4 +1,4 @@
 import streamlit as st
 
-st.image("liz.jpg", caption= "리즈 개이쁨")
+st.image("samsung-memory-IJolVhJKk7c-unsplash.jpg")
 st.title("Liz")
