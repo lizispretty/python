@@ -1,3 +1,3 @@
 import streamlit as st
 
-st.title("Liz")
+st.image("samsung-memory-IJolVhJKk7c-unsplash.jpg")
