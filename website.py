@@ -6,3 +6,6 @@ if st.button("Wathing anything"):
     st.image(image_url1)
 else:
     st.write("")
+
+if st.button("Not wathing anything"):
+    st.image()
