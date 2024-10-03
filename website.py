@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image
 
-st.title("* 리즈 *")
-st.subheader("리즈는 이쁘다")
+img = Image.open("C:\Users\PC\Pictures\리즈")
+st.image(img)
