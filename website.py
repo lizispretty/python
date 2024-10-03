@@ -1,11 +1,34 @@
 import streamlit as st
 
-st.title("Liz is pretty")
-if st.button("Wathing anything"):
-    image_url1 = "https://imgnews.pstatic.net/image/433/2024/09/19/0000108883_001_20240919100130136.jpg?type=w647"
-    st.image(image_url1)
-else:
-    st.write("")
+#제목
+st.title("게시판")
 
-if st.button("Not wathing anything"):
-    st.image()
+if "visibility" not in st.session_state:
+    st.session_state.visibility = "visible"
+    st.session_state.disabled = False
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.checkbox("Disable text input widget", ket="disabled")
+    st.radio(
+        "Set text input label visibility 👉",
+        key="visibility",
+        options=["visible", "hidden", "collapsed"],
+    )
+    st.text_input(
+        "Placehoder for the other text input widget",
+        "This is a placeholder",
+        key="placeholder",
+    )
+
+with col2:
+    text_input = st.text_input(
+        "Enter some text 👇",
+        label_visibility=st.session_state.visibility,
+        disabled=st.session_state.disabled,
+        placeholder=st.session_state.placeholder,
+    )
+
+    if text_input:
+        st.write("You entered: ", text_input)
