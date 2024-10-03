@@ -1,7 +1,6 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 
-chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-
-st.line_chart(chart_data)
+value = [61300]
+st.write('삼성전자 10월 이후 주가')
+value
+st.line_chart(value)
